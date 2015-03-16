@@ -22,12 +22,15 @@ module.exports = function(grunt) {
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
       
+      
       if (options.data && !grunt.file.exists(options.data)) {
         grunt.log.warn('Data file"' + options.data + '" not found.');
         return false;
       }
 
       f.src.forEach(function(file) {
+        grunt.log.ok('Processing ' + file);
+        
         if (!grunt.file.exists(file)) {
           grunt.log.warn('Source file "' + file + '" not found.');
           return false;
