@@ -1,0 +1,5 @@
+{
+  "input": "templates",
+  "input2": {"test" : "data"},
+  "output": "rendered"
+}
