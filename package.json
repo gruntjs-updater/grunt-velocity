@@ -1,7 +1,7 @@
 {
   "name": "grunt-velocity",
   "description": "Grunt plugin to run velocity templates through a velocity engine in an unopinionated way",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/stephenwil/grunt-velocity",
   "author": {
     "name": "Stephen Wilson",
