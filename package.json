@@ -1,5 +1,5 @@
 {
-  "name": "grunt-velocity",
+  "name": "grunt-velocity-parser",
   "description": "Grunt plugin to run velocity templates through a velocity engine in an unopinionated way",
   "version": "0.1.1",
   "homepage": "https://github.com/stephenwil/grunt-velocity",
@@ -36,7 +36,9 @@
     "grunt": "~0.4.5"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "velocity",
+    "velocity templates"
   ],
   "dependencies": {
     "velocity": "^0.7.1"
