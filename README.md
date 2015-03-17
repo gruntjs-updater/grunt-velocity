@@ -1,6 +1,6 @@
 # grunt-velocity
 
-> Grunt plugin to run velocity templates through a velocity engine in an un-opinionated way
+> Grunt plugin to run the velocity templates through the node velocity engine in an un-opinionated way.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -26,59 +26,38 @@ In your project's Gruntfile, add a section named `velocity` to the data object p
 grunt.initConfig({
   velocity: {
     options: {
-      // Task-specific options go here.
+      data: path/to/data.json
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+    files: {
+      <standard grunt dest & source file specification>
+    }
 });
 ```
 
 ### Options
 
-#### options.separator
+#### options.data
 Type: `String`
-Default value: `',  '`
 
-A string value that is used to do something with whatever.
+A path to the data (JSON) file that will be merged with the templates.
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+#### Options
+In this example, the data (JSON) file is specified in the options, and the velocity templates (that consume the data) & output folder are specified in the task.
+The example below is in the grunt format, of dest: [src files], but any standard grunt format can be used.
 
 ```js
 grunt.initConfig({
   velocity: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  velocity: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+     options: {
+        data: 'path/to/data.json'
+     },
+     files: {
+      'my/output_folder/': ['src/velocity-templates/**/*.vm']
+     }
+  }
 });
 ```
 
