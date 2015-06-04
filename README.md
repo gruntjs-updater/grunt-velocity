@@ -45,14 +45,14 @@ A path to the data (JSON) file that will be merged with the templates.
 ### Usage Examples
 
 #### Options
-In this example, the data (JSON) file is specified in the options, and the velocity templates (that consume the data) & output folder are specified in the task.
+In this example, the data (JSON file or JSON Object) is specified in the options, and the velocity templates (that consume the data) & output folder are specified in the task.
 The example below is in the grunt format, of dest: [src files], but any standard grunt format can be used.
 
 ```js
 grunt.initConfig({
   velocity: {
      options: {
-        data: 'path/to/data.json'
+        data: 'path/to/data.json' // alternately {}
      },
      files: {
       'my/output_folder/': ['src/velocity-templates/**/*.vm']
